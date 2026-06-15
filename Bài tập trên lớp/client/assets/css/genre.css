@@ -1,0 +1,168 @@
+/* ============================================
+   genre.css — Browse by Genre (giống Spotify)
+   Đặt tại: assets/css/genre.css
+   Link trong search.html:
+   <link rel="stylesheet" href="assets/css/genre.css">
+   ============================================ */
+
+/* === WRAPPER === */
+.browse-section {
+  padding: 0;
+}
+
+.browse-title {
+  font-size: var(--text-2xl, 24px);
+  font-weight: var(--weight-extrabold, 800);
+  color: var(--color-text-primary, #fff);
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+/* === GRID === */
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* === CARD === */
+.genre-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 130px;
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+}
+
+.genre-card:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+/* Tên genre — góc trên trái */
+.genre-card-name {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+  z-index: 2;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  max-width: 55%;
+}
+
+/* Ảnh trang trí — góc dưới phải, xoay nghiêng */
+.genre-card-img {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+  transform: rotate(25deg);
+  box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* === MÀU NỀN TỪNG GENRE === */
+.genre-pop {
+  background: #e91429;
+}
+.genre-vpop {
+  background: #8c1932;
+}
+.genre-hiphop {
+  background: #ba5d07;
+}
+.genre-rnb {
+  background: #1e3264;
+}
+.genre-rock {
+  background: #e8115b;
+}
+.genre-indie {
+  background: #477d95;
+}
+.genre-edm {
+  background: #8d67ab;
+}
+.genre-jazz {
+  background: #0d73ec;
+}
+.genre-classical {
+  background: #148a08;
+}
+.genre-kpop {
+  background: #e91429;
+}
+.genre-anime {
+  background: #e8115b;
+}
+.genre-lofi {
+  background: #503750;
+}
+.genre-chill {
+  background: #1e8a4a;
+}
+.genre-workout {
+  background: #e55d25;
+}
+.genre-party {
+  background: #b02897;
+}
+.genre-focus {
+  background: #0d73ec;
+}
+.genre-sleep {
+  background: #282828;
+}
+.genre-mood {
+  background: #1e3264;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1200px) {
+  .genre-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .genre-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .genre-card {
+    height: 110px;
+  }
+  .genre-card-name {
+    font-size: 17px;
+  }
+  .genre-card-img {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 600px) {
+  .genre-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .genre-card {
+    height: 90px;
+  }
+  .genre-card-name {
+    font-size: 15px;
+  }
+  .genre-card-img {
+    width: 65px;
+    height: 65px;
+  }
+}
