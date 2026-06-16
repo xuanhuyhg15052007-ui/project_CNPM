@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notifications | Spotify Admin</title>
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+  <body>
+    <div class="admin-wrapper">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-icon img-icon" aria-hidden="true">
+            <img
+              alt="Spotify logo"
+              width="75"
+              height="75"
+              src="data:image/png;base64,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"
+            />
+          </div>
+          <div>
+            <h1>Spotify Admin</h1>
+            <p>Quản lý nội dung và người dùng</p>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="admin.html">🎵 Dashboard</a>
+          <a href="users.html">👥 Users</a>
+          <a href="artists.html">🎤 Artists</a>
+          <a href="songs.html">🎶 Songs</a>
+          <a class="active" href="notifications.html">🔔 Notifications</a>
+          <a href="albums.html">📀 Albums</a>
+          <a href="logout.html"> Logout</a>
+        </nav>
+      </aside>
+
+      <main class="dashboard-panel">
+        <header class="topbar">
+          <div>
+            <h1>Notifications</h1>
+            <p>Yêu cầu đăng nhạc từ ca sĩ cần phê duyệt.</p>
+          </div>
+          <div class="user-profile">Admin</div>
+        </header>
+
+        <section class="section split-section">
+          <div class="panel panel-table" style="padding: 16px">
+            <div class="panel-header">
+              <h3>Pending Requests</h3>
+            </div>
+            <div>
+              <ul
+                id="requests-list"
+                class="requests-list"
+                style="
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                  display: grid;
+                  gap: 8px;
+                "
+              >
+                <!-- items rendered by JS -->
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="panel panel-large"
+            id="request-detail"
+            style="padding: 20px"
+          >
+            <h3>Detail</h3>
+            <div id="no-selection">
+              Chọn một yêu cầu ở bên trái để xem chi tiết.
+            </div>
+            <div id="detail-card" style="display: none">
+              <p><strong>Artist:</strong> <span id="detail-artist"></span></p>
+              <p><strong>Song:</strong> <span id="detail-title"></span></p>
+              <p>
+                <strong>Link:</strong>
+                <a id="detail-link" href="#" target="_blank">Open</a>
+              </p>
+              <div class="modal-actions" style="margin-top: 16px">
+                <button id="detail-accept" class="btn-accept">Accept</button>
+                <button id="detail-decline" class="btn-decline">Decline</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // Initial demo requests (replace with server data when available)
+      const initialRequests = [
+        { id: "1", artist: "Jack", title: "Hoa hải đường", link: "#" },
+        {
+          id: "2",
+          artist: "Sơn Tùng",
+          title: "Muộn rồi mà sao còn",
+          link: "#",
+        },
+        { id: "3", artist: "Đen Vâu", title: "Đưa nhau đi trốn", link: "#" },
+      ];
+
+      const listEl = document.getElementById("requests-list");
+      const detailCard = document.getElementById("detail-card");
+      const noSelection = document.getElementById("no-selection");
+      const detailArtist = document.getElementById("detail-artist");
+      const detailTitle = document.getElementById("detail-title");
+      const detailLink = document.getElementById("detail-link");
+      const detailAccept = document.getElementById("detail-accept");
+      const detailDecline = document.getElementById("detail-decline");
+
+      let activeId = null;
+
+      function renderList() {
+        listEl.innerHTML = "";
+        const items = initialRequests;
+        if (!items.length) {
+          listEl.innerHTML =
+            '<li style="color:var(--muted)">Không có yêu cầu nào.</li>';
+          // clear detail
+          activeId = null;
+          hideDetail();
+          return;
+        }
+        items.forEach((r) => {
+          const li = document.createElement("li");
+          li.dataset.id = r.id;
+          li.dataset.artist = r.artist;
+          li.dataset.title = r.title;
+          li.dataset.link = r.link;
+          li.style.padding = "10px";
+          li.style.borderRadius = "12px";
+          li.style.cursor = "pointer";
+          li.style.display = "flex";
+          li.style.justifyContent = "flex-start";
+          li.style.alignItems = "center";
+          li.style.gap = "12px";
+          li.style.background = "rgba(255,255,255,0.02)";
+
+          const left = document.createElement("div");
+          left.innerHTML =
+            "<strong>" +
+            escapeHtml(r.artist) +
+            '</strong><div style="color:var(--muted);font-size:0.95rem">' +
+            escapeHtml(r.title) +
+            "</div>";
+
+          li.appendChild(left);
+
+          // click on li -> show detail
+          li.addEventListener("click", function () {
+            showDetailFor(r.id);
+          });
+
+          listEl.appendChild(li);
+        });
+      }
+
+      function showDetailFor(id) {
+        const row = listEl.querySelector('li[data-id="' + id + '"]');
+        if (!row) return;
+        activeId = id;
+        detailArtist.textContent = row.dataset.artist;
+        detailTitle.textContent = row.dataset.title;
+        detailLink.href = row.dataset.link || "#";
+        noSelection.style.display = "none";
+        detailCard.style.display = "block";
+      }
+
+      function hideDetail() {
+        noSelection.style.display = "block";
+        detailCard.style.display = "none";
+      }
+
+      function acceptRequest(id) {
+        // remove from UI
+        const row = listEl.querySelector('li[data-id="' + id + '"]');
+        if (row) row.remove();
+        if (activeId === id) {
+          activeId = null;
+          hideDetail();
+        }
+      }
+
+      function declineRequest(id) {
+        const row = listEl.querySelector('li[data-id="' + id + '"]');
+        if (row) row.remove();
+        if (activeId === id) {
+          activeId = null;
+          hideDetail();
+        }
+      }
+
+      // modal-like detail accept/decline
+      detailAccept.addEventListener("click", function () {
+        if (activeId) acceptRequest(activeId);
+      });
+      detailDecline.addEventListener("click", function () {
+        if (activeId) declineRequest(activeId);
+      });
+
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+
+      // initial render
+      renderList();
+    </script>
+  </body>
+</html>
