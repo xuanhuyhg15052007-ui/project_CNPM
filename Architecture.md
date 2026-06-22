@@ -5,4 +5,5 @@ Khi người dùng gửi một yêu cầu thông qua trình duyệt, ví dụ tr
 Tiếp theo, Controller sẽ gọi các dịch vụ xử lý dữ liệu thông qua Entity Framework Core. Công nghệ này đóng vai trò trung gian giữa ứng dụng và cơ sở dữ liệu SQL Server, giúp thực hiện các truy vấn dữ liệu mà không cần viết trực tiếp câu lệnh SQL phức tạp. Sau khi lấy dữ liệu thành công, hệ thống tạo ra một đối tượng Model chứa thông tin bài hát như tiêu đề, ca sĩ và các thuộc tính liên quan.
 
 Cuối cùng, dữ liệu từ Model được truyền sang View (Razor .cshtml) để kết hợp với giao diện HTML và sinh ra nội dung hoàn chỉnh gửi về trình duyệt dưới dạng HTTP Response (HTML hoặc JSON). Quy trình này đảm bảo việc xử lý dữ liệu và hiển thị giao diện được tách biệt, giúp hệ thống hoạt động hiệu quả và dễ quản lý hơn.
+
 <img width="458" height="382" alt="image" src="https://github.com/user-attachments/assets/94ec58ca-a71f-4e8e-b978-d9d804ea38de" />
